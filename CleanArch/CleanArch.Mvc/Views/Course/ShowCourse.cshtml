@@ -1,0 +1,13 @@
+﻿@model CleanArch.Domain.Models.Course
+@{
+    ViewData["Title"] = "ShowCourse";
+}
+
+<h1>@Model.Name</h1>
+
+<img class="img-thumbnail" src="@Model.ImgUrl"/>
+
+<p>
+    @Model.Description
+</p>
+

@@ -10,7 +10,9 @@
         @foreach(var item in Model.Courses)
         {
             <div class="course-image-container">
-                <div class="course-image" style="background-image:url(@item.ImgUrl)"></div>
+                <a href="/Course/ShowCourse/@item.CourseId">
+                    <div class="course-image" style="background-image:url(@item.ImgUrl)"></div>
+                </a>
             </div>
             <span>@item.Name</span>
         }
