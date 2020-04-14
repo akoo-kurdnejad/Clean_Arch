@@ -10,6 +10,7 @@ namespace CleanArch.Application.Interfaces
     {
         CheckUser CheckUserName(string userName);
         CheckUser CheckEmail(string email);
+        bool IsExist(string email, string password);
         int RegisterUser(User user);
     }
 }

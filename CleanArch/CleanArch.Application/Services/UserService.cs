@@ -1,4 +1,5 @@
 ﻿using CleanArch.Application.Interfaces;
+using CleanArch.Application.Security;
 using CleanArch.Application.ViewModels;
 using CleanArch.Domain.Interfaces;
 using CleanArch.Domain.Models;
@@ -34,6 +35,11 @@ namespace CleanArch.Application.Services
                 return CheckUser.UserNameNotValid;
 
             return CheckUser.OK;
+        }
+
+        public bool IsExist(string email, string password)
+        {
+            return _userRepository.IsExist(email.Trim().ToLower(), PasswordHelper.EncodePasswordMd5(password));
         }
 
         public int RegisterUser(User user)

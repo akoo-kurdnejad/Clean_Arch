@@ -10,6 +10,7 @@ namespace CleanArch.Domain.Interfaces
         void AddUser(User user);
         bool IsExistEmail(string email);
         bool IsExistUserName(string username);
+        bool IsExist(string email, string password);
         void Save();
     }
 }
