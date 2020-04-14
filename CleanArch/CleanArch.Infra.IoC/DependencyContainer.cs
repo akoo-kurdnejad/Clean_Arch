@@ -16,15 +16,15 @@ namespace CleanArch.Infra.IoC
             #region Application Layer
 
             services.AddScoped<ICourseService, CourseService>();
+            services.AddScoped<IUserService, UserService>();
 
             #endregion
-
-
 
 
             #region Infra Domain Layer
 
             services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             #endregion
         }
